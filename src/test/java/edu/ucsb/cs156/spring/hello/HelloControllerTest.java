@@ -25,7 +25,7 @@ public class HelloControllerTest {
 
     @Test
     public void home_page_has_expected_content() throws Exception {
-        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/").accept("text/plain;charset=UTF-8"))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/").accept("text/html;charset=UTF-8"))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         String expectedContent = HelloController.homePageContent;
@@ -34,7 +34,7 @@ public class HelloControllerTest {
 
     @Test
     public void hello_es_page_has_expected_content() throws Exception {
-        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/es").accept("text/plain;charset=UTF-8"))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/es").accept("text/html;charset=UTF-8"))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         String expectedContent = HelloController.hello_es_content;
@@ -43,7 +43,7 @@ public class HelloControllerTest {
 
     @Test
     public void hello_fr_page_has_expected_content() throws Exception {
-        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/fr").accept("text/plain;charset=UTF-8"))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/fr").accept("text/html;charset=UTF-8"))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         String expectedContent = HelloController.hello_fr_content;
@@ -52,7 +52,7 @@ public class HelloControllerTest {
 
     @Test
     public void hello_cn_page_has_expected_content() throws Exception {
-        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/cn").accept("text/plain;charset=UTF-8"))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/cn").accept("text/html;charset=UTF-8"))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         String expectedContent = HelloController.hello_cn_content;

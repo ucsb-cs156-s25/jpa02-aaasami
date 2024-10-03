@@ -15,7 +15,7 @@ public class HelloController {
             </ul>
             """;
 
-    @GetMapping(value = "/", produces = "text/plain;charset=UTF-8")
+    @GetMapping(value = "/", produces = "text/html;charset=UTF-8")
     public String hello() {
         return homePageContent;
     }
@@ -25,7 +25,7 @@ public class HelloController {
             <p><a href="/">Volver a la página de inicio (home)</a></p>
             """;
 
-    @GetMapping(value = "/es", produces = "text/plain;charset=UTF-8")
+    @GetMapping(value = "/es", produces = "text/html;charset=UTF-8")
     public String hello_es() {
         return hello_es_content;
     }
@@ -35,7 +35,7 @@ public class HelloController {
             <p><a href="/">Retour à la page d'accueil (home)</a></p>
             """;
 
-    @GetMapping(value = "/fr", produces = "text/plain;charset=UTF-8")
+    @GetMapping(value = "/fr", produces = "text/html;charset=UTF-8")
     public String hello_fr() {
         return hello_fr_content;
     }
@@ -46,7 +46,7 @@ public class HelloController {
             <p><a href="/">返回主页 (Fǎnhuí zhǔyè)(home)</a></p>
             """;
 
-    @GetMapping(value = "/cn", produces = "text/plain;charset=UTF-8")
+    @GetMapping(value = "/cn", produces = "text/html;charset=UTF-8")
     public String hello_cn() {
         return hello_cn_content;
     }
