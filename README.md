@@ -56,7 +56,7 @@ below.
 # Modifications from the original
 
 * Java 21 support
-  * Converting `pom.xml` to use Java 17
+  * Converting `pom.xml` to use Java 21
 * JUnit 5
   * Converting test code to use JUnit 5 instead of JUnit 4  
 * Dokku Support
