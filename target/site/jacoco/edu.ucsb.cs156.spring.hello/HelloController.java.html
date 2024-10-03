@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HelloController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hello</a> &gt; <a href="index.source.html" class="el_package">edu.ucsb.cs156.spring.hello</a> &gt; <span class="el_source">HelloController.java</span></div><h1>HelloController.java</h1><pre class="source lang-java linenums">package edu.ucsb.cs156.spring.hello;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+<span class="fc" id="L7">public class HelloController {</span>
+
+<span class="fc" id="L9">    public static String homePageContent = &quot;&quot;&quot;</span>
+            &lt;h1&gt;Hello, World&lt;/h1&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;/es&quot;&gt;Español&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/fr&quot;&gt;Français&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/cn&quot;&gt;中文&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &quot;&quot;&quot;;
+
+    @GetMapping(value = &quot;/&quot;, produces = &quot;text/plain;charset=UTF-8&quot;)
+    public String hello() {
+<span class="fc" id="L20">        return homePageContent;</span>
+    }
+
+<span class="fc" id="L23">    public static String hello_es_content = &quot;&quot;&quot;</span>
+            &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+            &lt;p&gt;&lt;a href=&quot;/&quot;&gt;Volver a la página de inicio (home)&lt;/a&gt;&lt;/p&gt;
+            &quot;&quot;&quot;;
+
+    @GetMapping(value = &quot;/es&quot;, produces = &quot;text/plain;charset=UTF-8&quot;)
+    public String hello_es() {
+<span class="fc" id="L30">        return hello_es_content;</span>
+    }
+
+<span class="fc" id="L33">    public static String hello_fr_content = &quot;&quot;&quot;</span>
+            &lt;h1&gt;Bonjour le monde&lt;/h1&gt;
+            &lt;p&gt;&lt;a href=&quot;/&quot;&gt;Retour à la page d'accueil (home)&lt;/a&gt;&lt;/p&gt;
+            &quot;&quot;&quot;;
+
+    @GetMapping(value = &quot;/fr&quot;, produces = &quot;text/plain;charset=UTF-8&quot;)
+    public String hello_fr() {
+<span class="fc" id="L40">        return hello_fr_content;</span>
+    }
+
+<span class="fc" id="L43">    public static String hello_cn_content = &quot;&quot;&quot;</span>
+            &lt;h1&gt;你好世界&lt;/h1&gt;
+            &lt;h2&gt;Nǐ hǎo shìjiè&lt;/h2&gt;
+            &lt;p&gt;&lt;a href=&quot;/&quot;&gt;返回主页 (Fǎnhuí zhǔyè)(home)&lt;/a&gt;&lt;/p&gt;
+<span class="fc" id="L47">            &quot;&quot;&quot;;</span>
+
+    @GetMapping(value = &quot;/cn&quot;, produces = &quot;text/plain;charset=UTF-8&quot;)
+    public String hello_cn() {
+<span class="fc" id="L51">        return hello_cn_content;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
