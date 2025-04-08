@@ -48,7 +48,6 @@
   <properties>
     <java.version>21</java.version>
     <mainClass>edu.ucsb.cs156.spring.hello.Application</mainClass>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <!-- (22) <dependencyManagement/> -->
@@ -121,6 +120,32 @@
               <goal>report</goal>
             </goals>
           </execution>
+          <execution>
+            <id>check-coverage</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <rule>
+                  <element>BUNDLE</element>
+                  <limits>
+                    <limit>
+                      <counter>INSTRUCTION</counter>
+                      <value>COVEREDRATIO</value>
+                      <minimum>1.0</minimum>
+                    </limit>
+                    <limit>
+                      <counter>BRANCH</counter>
+                      <value>COVEREDRATIO</value>
+                      <minimum>1.0</minimum>
+                    </limit>
+                  </limits>
+                </rule>
+              </rules>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 
@@ -151,6 +176,7 @@
             <outputFormat>CSV</outputFormat>
             <outputFormat>XML</outputFormat>
           </outputFormats>
+          <mutationThreshold>100</mutationThreshold>
         </configuration>
       </plugin>
 
