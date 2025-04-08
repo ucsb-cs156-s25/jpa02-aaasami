@@ -1,16 +1,24 @@
-# STARTER-jpa01
+# STARTER-jpa02
 
-* TODO: Change the title of this README (above)
-  in the text `# STARTER-jpa01` above
-  to match the name of your repo, i. e., `jpa01-yourgithubid`, then delete
+* TODO: Change the title of this README 
+  in the text `# STARTER-jpa02` above
+  to match the name of your repo, i. e., `jpa02-yourgithubid`, then delete
   this TODO item.
 
-* TODO: Correct the "deployed at" link to app on Dokku (below)
+* TODO: Correct the links to repo below, 
+  then delete this TODO.  Replace it with 
+  a link to your repo, e.g. 
+  https://github.com/ucsb-cs156-s25/jpa02-cgaucho
+
+Repo: https://ucsb-cs156-s25/STARTER-jpa02
+
+* TODO: Correct the "deployed at" link to app on Dokku
   then delete this TODO.  Replace it with 
   a link to your running app on Dokku, e.g.
-  https://jpa01-cgaucho.dokku-14.cs.ucsb.edu
+  https://jpa02-cgaucho.dokku-14.cs.ucsb.edu
 
-Deployed at: https://jpa01-replace-me.dokku-xx.cs.ucsb.edu
+
+Deployed at: https://jpa02-replace-me.dokku-xx.cs.ucsb.edu
 
 
 # About this repo
@@ -34,7 +42,7 @@ This is a minimal "Hello World" type webapp built with Spring Boot.
 # Sources
 
 The code in this repo is in support of
-jpa01 for S25 for CMPSC 156.
+jpa02 for S25 for CMPSC 156.
 
 The code in this repo is based in part on the tutorial here:
 <https://spring.io/guides/gs/spring-boot/>, and the code here in the
@@ -59,5 +67,8 @@ below.
   * Adding jacoco as a plugin to measure test 
     case coverage
   * Adding pitest for mutation test coverage.
- 
+  * Adding support for GitHub Actions to run
+    the test cases, compute jacoco report,
+    upload code coverage reports to Codecov.io,
+    and produce pitest artifacts.
 
