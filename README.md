@@ -2,7 +2,7 @@
 
 Repo: https://github.com/ucsb-cs156-s25/jpa02-aaasami
 
-Deployed at: https://jpa02-aaasami.dokku-11.cs.ucsb.edu/info
+Deployed at: https://jpa02-aaasami.dokku-11.cs.ucsb.edu
 
 
 # About this repo
